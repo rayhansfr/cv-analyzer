@@ -224,7 +224,7 @@ class CVAnalysisMain:
         print("Choose CV source:")
         print("1. Single CV file")
         print("2. Folder with multiple CVs")
-        print("3. Use default CV folder (../cv)")
+        print("3. Use default CV folder (cv\)")
         
         while True:
             choice = input("\nEnter your choice (1-3): ").strip()
@@ -249,7 +249,7 @@ class CVAnalysisMain:
                     print("❌ Folder not found. Please try again.")
                     
             elif choice == '3':
-                default_path = "../cv"
+                default_path = "cv/"
                 if os.path.exists(default_path):
                     pdf_files = list(Path(default_path).glob("*.pdf"))
                     if pdf_files:
